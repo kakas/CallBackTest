@@ -54,7 +54,6 @@ class Product < ActiveRecord::Base
     puts  "after_update"
   end
 
-
   before_destroy do |product|
     puts  "before_destroy"
   end
