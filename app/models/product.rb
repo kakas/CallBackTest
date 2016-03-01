@@ -22,9 +22,9 @@ class Product < ActiveRecord::Base
     puts  "before_create"
   end
 
-  around_create do |product|
-    puts  "around_create"
-  end
+  # around_create do |product|
+    # puts  "around_create"
+  # end
 
   after_create do |product|
     puts  "after_create"
@@ -46,9 +46,9 @@ class Product < ActiveRecord::Base
     puts  "before_update"
   end
 
-  around_update do |product|
-    puts  "around_update"
-  end
+  # around_update do |product|
+    # puts  "around_update"
+  # end
 
   after_update do |product|
     puts  "after_update"
@@ -59,14 +59,13 @@ class Product < ActiveRecord::Base
     puts  "before_destroy"
   end
 
-  around_destroy do |product|
-    puts  "around_destroy"
-  end
+  # around_destroy do |product|
+    # puts  "around_destroy"
+  # end
 
   after_destroy do |product|
     puts  "after_destroy"
   end
-
 
   after_find do |product|
     puts  "after_find"

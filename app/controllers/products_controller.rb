@@ -1,14 +1,17 @@
 class ProductsController < ApplicationController
 
   def index
+    puts "---- index ----"
     @products = Product.all
   end
 
   def new
+    puts "---- new ----"
     @product = Product.new
   end
 
   def create
+    puts "---- create ----"
     @product = Product.new(product_params)
 
     if @product.save
@@ -19,10 +22,12 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    puts "---- edit ----"
     @product = Product.find(params[:id])
   end
 
   def update
+    puts "---- update ----"
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
@@ -33,6 +38,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    puts "---- destroy ----"
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_path
